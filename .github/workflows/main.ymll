@@ -3,7 +3,7 @@ name: Generate Snake Game
 on:
   schedule:
     - cron: "0 0 * * *" # يشتغل كل يوم
-  workflow_dispatch: # يسمح لك بتشغيله يدويًا
+  workflow_dispatch: # تشغيل يدوي
 
 jobs:
   generate:
@@ -27,3 +27,6 @@ jobs:
           build_dir: dist
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    environment:
+      name: github-pages
